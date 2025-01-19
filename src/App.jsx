@@ -6,6 +6,7 @@ import ShopData from "./components/Shop/shopData";
 import AllProductsData from "./components/Allproducts/allProductsData";
 import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
+import { UserProvider } from "./context/UserContext";
 
 function App() {
   // pulling data from data files & storing it in variables here
