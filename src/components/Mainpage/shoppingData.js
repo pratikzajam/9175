@@ -28,8 +28,8 @@ const shoppingData = [
   },
   {
     id: 5,
-    title: "50% Off On Your First Shopping",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+    title: "50% Off On Study Essentials for MIT Students",
+    desc: "Get 50% off on your first purchase of study essentials like laptops, notebooks, and more. Upgrade your learning experience today!",
     cover: "./assets/main-slider/slide-4.png",
   },
 ];

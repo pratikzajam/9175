@@ -60,7 +60,11 @@
 
 .shop .product img {
   width: 100%;
+  height: 400px;
+
+  
 }
+
 
 .shop .product {
   transition: 0.5s;
