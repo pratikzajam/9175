@@ -1,7 +1,10 @@
+const storedUser = localStorage.getItem("user");
+const user = JSON.parse(storedUser);
+
 const shoppingData = [
   {
     id: 1,
-    title: "50% Off On Kitchen Appliances",
+    title: `${user ? user.name : "Guest"}, 50% Off On Kitchen Appliances`, // Display user name or "Guest" if user is not found
     desc: "Upgrade your kitchen with modern appliances at half the price. Perfect for students looking to cook their favorite meals conveniently.",
     cover: './assets/main-slider/slide-1.webp',
   },
