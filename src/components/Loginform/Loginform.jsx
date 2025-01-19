@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
-import { useUser } from "../../context/UserContext"; // Import the custom hook
+import { useUser } from "../../context/UserContext";
 import "./loginform.css";
 
 const Loginform = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
   const navigate = useNavigate();
-  const { updateUser } = useUser(); // Get the updateUser function from context
+  const { updateUser } = useUser();
 
   // Handle login form submission
   async function handleLogin(event) {
@@ -21,6 +22,8 @@ const Loginform = () => {
     }
 
     try {
+      setIsLoading(true); // Set loading to true when login starts
+
       // Send POST request to login API
       const response = await axios.post("https://mit-backend-aruh.onrender.com/api/login", {
         email,
@@ -46,6 +49,8 @@ const Loginform = () => {
     } catch (error) {
       // Handle error (e.g., invalid credentials)
       toast.error(error.response?.data?.message || "Login failed");
+    } finally {
+      setIsLoading(false); // Set loading to false after the request completes
     }
   }
 
@@ -89,8 +94,12 @@ const Loginform = () => {
                 <Link to="/forgot-password">Click here to reset</Link>
               </span>
             </p>
-            <button type="submit" className="submit-btn">
-              Sign In
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? (
+                <span className="loader"></span> // Add loader icon
+              ) : (
+                "Sign In"
+              )}
             </button>
           </form>
         </div>
