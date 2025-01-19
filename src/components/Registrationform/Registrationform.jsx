@@ -28,7 +28,7 @@ const Registrationform = () => {
         studentId: studentIdRef.current.value,
       };
 
-      const response = await axios.post("http://localhost:3000/api/signup", formData);
+      const response = await axios.post("https://mit-backend-aruh.onrender.com/api/signup", formData);
 
       // Success toast
       toast.success(response.data.message || "Registration successful!");

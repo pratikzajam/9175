@@ -22,7 +22,7 @@ const Loginform = () => {
 
     try {
       // Send POST request to login API
-      const response = await axios.post("http://localhost:3000/api/login", {
+      const response = await axios.post("https://mit-backend-aruh.onrender.com/api/login", {
         email,
         password,
       });
