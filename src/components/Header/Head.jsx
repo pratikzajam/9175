@@ -18,7 +18,7 @@ export const Head = () => {
             </a>
             <a
               target="_blank"
-              href="mailto:arshadchowdhury46@gmail.com"
+              href="mailto:zajampratik@gmail.com"
               className="icon-flex phone-icon"
             >
               <i className="fa fa-envelope"></i>
