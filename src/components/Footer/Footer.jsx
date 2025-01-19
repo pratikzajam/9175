@@ -7,10 +7,7 @@ const Footer = () => {
       <div className="app-store-play">
     
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, quia
-          eius est sunt consectetur rem possimus officia minima reiciendis
-          perspiciatis! Soluta corrupti nesciunt suscipit repellendus adipisci
-          reiciendis veritatis, accusantium saepe?
+        Get an extra 10% off with your student ID!
         </p>
         <div className="icon-footer appstore">
           <div className="img d_flex logo-text">
