@@ -1,5 +1,5 @@
 import React from "react";
-import Categ from "./Categ";
+
 import { useNavigate } from "react-router-dom";
 import Shopcart from "./Shopcart";
 import "./shop.css";
@@ -16,7 +16,6 @@ const Shop = ({ shopItems, addToCart }) => {
     <>
       <section className="shop background">
         <div className="container shop-container">
-          <Categ shopItems={shopItems} addToCart={addToCart} />
           <div className="shop-main">
             <div className="heading heading-view-all">
               <div className="heading-left row f_flex">
